@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================
+   Obol Accounting — Design Tokens
+   Aligned with Obol brand kit: DM Sans + green/charcoal palette.
+   All colors are HSL.
+   ========================================================== */
+
+@layer base {
+  :root {
+    /* Surfaces (light mode) */
+    --background: 195 18% 98%;
+    --foreground: 191 33% 10%;
+    --surface: 195 18% 96%;
+    --surface-elevated: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 191 33% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 191 33% 10%;
+
+    /* Brand */
+    /* Obol green (#2FE4AB) */
+    --primary: 160 77% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 160 77% 48%;
+    --primary-muted: 160 60% 94%;
+
+    --secondary: 195 18% 94%;
+    --secondary-foreground: 191 33% 10%;
+
+    --muted: 195 18% 94%;
+    --muted-foreground: 191 12% 38%;
+
+    /* Light green accent (#A7E2D0-ish) */
+    --accent: 162 46% 86%;
+    --accent-foreground: 191 33% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 152 60% 95%;
+
+    --warning: 32 95% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 32 95% 95%;
+
+    --info: 211 92% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 195 18% 88%;
+    --border-strong: 195 18% 80%;
+    --input: 195 18% 88%;
+    --ring: 160 77% 54%;
+
+    --radius: 0.625rem;
+
+    /* Sidebar */
+    --sidebar-background: 195 18% 97%;
+    --sidebar-foreground: 191 20% 28%;
+    --sidebar-primary: 160 77% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 195 18% 92%;
+    --sidebar-accent-foreground: 191 33% 10%;
+    --sidebar-border: 195 18% 86%;
+    --sidebar-ring: 160 77% 54%;
+
+    /* Financial semantic */
+    --money-positive: 152 60% 36%;
+    --money-negative: 0 72% 51%;
+    --money-neutral: 220 9% 46%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(160 77% 54%), hsl(187 62% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(195 18% 99%), hsl(195 18% 97%));
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px 0 hsl(222 24% 12% / 0.04);
+    --shadow-sm: 0 1px 3px 0 hsl(222 24% 12% / 0.06), 0 1px 2px -1px hsl(222 24% 12% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(222 24% 12% / 0.08), 0 2px 4px -2px hsl(222 24% 12% / 0.06);
+    --shadow-lg: 0 10px 25px -5px hsl(222 24% 12% / 0.10), 0 8px 10px -6px hsl(222 24% 12% / 0.08);
+    --shadow-elegant: 0 20px 40px -15px hsl(244 75% 57% / 0.18);
+
+    /* Motion */
+    --transition-base: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dark {
+    /* Obol charcoal backgrounds (#091011 / #111F22) */
+    --background: 189 31% 5%;
+    --foreground: 195 18% 92%;
+    --surface: 191 33% 10%;
+    --surface-elevated: 191 28% 12%;
+
+    --card: 191 28% 11%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 191 28% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 160 77% 54%;
+    --primary-foreground: 189 31% 5%;
+    --primary-hover: 160 77% 60%;
+    --primary-muted: 160 45% 18%;
+
+    --secondary: 191 22% 15%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 191 22% 14%;
+    --muted-foreground: 195 10% 68%;
+
+    --accent: 191 22% 15%;
+    --accent-foreground: 160 77% 70%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 55% 48%;
+    --success-foreground: 224 22% 7%;
+    --success-muted: 152 40% 16%;
+
+    --warning: 32 90% 58%;
+    --warning-foreground: 224 22% 7%;
+    --warning-muted: 32 50% 18%;
+
+    --info: 211 90% 62%;
+    --info-foreground: 224 22% 7%;
+
+    --border: 191 22% 18%;
+    --border-strong: 191 22% 26%;
+    --input: 191 22% 18%;
+    --ring: 160 77% 54%;
+
+    --sidebar-background: 189 31% 5%;
+    --sidebar-foreground: 195 10% 72%;
+    --sidebar-primary: 160 77% 54%;
+    --sidebar-primary-foreground: 189 31% 5%;
+    --sidebar-accent: 191 22% 13%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 191 22% 14%;
+    --sidebar-ring: 160 77% 54%;
+
+    --money-positive: 152 55% 52%;
+    --money-negative: 0 70% 60%;
+    --money-neutral: 220 10% 62%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(160 77% 54%), hsl(187 62% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(189 31% 6%), hsl(189 31% 5%));
+
+    --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.30);
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.40), 0 1px 2px -1px hsl(0 0% 0% / 0.30);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.45), 0 2px 4px -2px hsl(0 0% 0% / 0.35);
+    --shadow-lg: 0 10px 25px -5px hsl(0 0% 0% / 0.55), 0 8px 10px -6px hsl(0 0% 0% / 0.45);
+    --shadow-elegant: 0 20px 40px -15px hsl(244 90% 50% / 0.40);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Tabular numerals for all financial figures */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .money-positive { @apply text-[hsl(var(--money-positive))]; }
+  .money-negative { @apply text-[hsl(var(--money-negative))]; }
+  .money-neutral { @apply text-[hsl(var(--money-neutral))]; }
+
+  .glass {
+    background: hsl(var(--surface-elevated) / 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+  }
+}
